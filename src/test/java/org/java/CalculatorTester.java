@@ -44,9 +44,9 @@ public class CalculatorTester {
 	@Test 
 	@DisplayName("Test division operation")
 	public void divisionOperation() throws Exception {
-		float result = calculator.divide(500, 10);
+		float result = calculator.divide(37, 3);
 		
-		assertEquals(50, result);
+		assertEquals( 37f / 3f, result);
 	}
 	
 	@Test 
