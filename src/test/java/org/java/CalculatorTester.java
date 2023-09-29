@@ -1,6 +1,7 @@
 package org.java;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -42,10 +43,16 @@ public class CalculatorTester {
 	
 	@Test 
 	@DisplayName("Test division operation")
-	public void divisionOperation() {
+	public void divisionOperation() throws Exception {
 		float result = calculator.divide(500, 10);
 		
 		assertEquals(50, result);
+	}
+	
+	@Test 
+	@DisplayName("Test division by zero")
+	public void divisionByZero() {
+		assertThrows(Exception.class, () -> calculator.divide(5, 0), "You can't divide by 0");
 	}
 	
 	

@@ -19,7 +19,10 @@ public class Calculator {
 		float result = num1 * num2;
 		return result;
 	}
-	float divide(float num1, float num2) {
+	float divide(float num1, float num2) throws Exception {
+		if(num2 == 0) {
+			throw new Exception("You can't divide by 0");
+		}
 		float result = num1 / num2;
 		return result;
 	}
