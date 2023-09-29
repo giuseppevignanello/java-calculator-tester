@@ -15,11 +15,11 @@ public class Calculator {
 		float result = num1 - num2; 
 		return result;
 	}
-	float divide(float num1, float num2) {
+	float multiply(float num1, float num2) {
 		float result = num1 * num2;
 		return result;
 	}
-	float multiply(float num1, float num2) {
+	float divide(float num1, float num2) {
 		float result = num1 / num2;
 		return result;
 	}
